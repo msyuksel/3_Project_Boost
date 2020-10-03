@@ -1112,10 +1112,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1883792386, guid: 111b40fd8323c33419abe9fb94dca22a, type: 3}
-      propertyPath: m_Constraints
-      value: 48
-      objectReference: {fileID: 0}
     - target: {fileID: 3153064241491051733, guid: 111b40fd8323c33419abe9fb94dca22a,
         type: 3}
       propertyPath: m_Name
@@ -1530,6 +1526,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975286707990119655, guid: 79291a345fccefa40a690b7c8315b34b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79291a345fccefa40a690b7c8315b34b, type: 3}

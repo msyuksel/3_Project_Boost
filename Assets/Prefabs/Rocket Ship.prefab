@@ -241,7 +241,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 56
+  m_Constraints: 48
   m_CollisionDetection: 0
 --- !u!82 &1883792390
 AudioSource:
@@ -253,7 +253,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: af75af07f2068c04099dcf1d66eceafc, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 0.66
@@ -353,6 +353,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainThrust: 15
   rcsThrust: 220
+  mainEngine: {fileID: 8300000, guid: af75af07f2068c04099dcf1d66eceafc, type: 3}
+  success: {fileID: 8300000, guid: 839c7a1405e90bc45b170666aee55496, type: 3}
+  death: {fileID: 8300000, guid: 2d1132c87aa1ab34a803eb3bef5c9393, type: 3}
 --- !u!1 &3641533418457888883
 GameObject:
   m_ObjectHideFlags: 0

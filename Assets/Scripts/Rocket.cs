@@ -33,7 +33,7 @@ public class Rocket : MonoBehaviour
         if (state == State.Alive)
         {
             RespondToThrustInput();
-            RespontToRotateInput();
+            RespondToRotateInput();
         }
 
     }
@@ -62,7 +62,7 @@ public class Rocket : MonoBehaviour
         state = State.Transcending;
         audioSource.PlayOneShot(success);
         successParticles.Play();
-        Invoke("LoadNextLevel", 1f);
+        Invoke(nameof(LoadNextLevel), 1f);
     }
 
     private void StartDeathSequence()
@@ -71,14 +71,21 @@ public class Rocket : MonoBehaviour
         audioSource.Stop();
         audioSource.PlayOneShot(death);
         deathParticles.Play();
-        Invoke("LoadFirstLevel", 1f);
+        Invoke(nameof(LoadFirstLevel), 1f);
     }
 
     private void LoadNextLevel()
     {
         state = State.Alive;
-        SceneManager.LoadScene(1);
+        
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (SceneManager.sceneCountInBuildSettings > nextSceneIndex)
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
+
     }
+
     private void LoadFirstLevel()
     {
         state = State.Alive;
@@ -93,8 +100,7 @@ public class Rocket : MonoBehaviour
         }
         else
         {
-            audioSource.Stop();
-            mainEngineParticles.Stop();
+            ReleaseThrust();
         }
     }
 
@@ -107,13 +113,21 @@ public class Rocket : MonoBehaviour
         }
 
         if (!mainEngineParticles.isPlaying)
-
         {
             mainEngineParticles.Play();
         }
     }
 
-    private void RespontToRotateInput()
+    private void ReleaseThrust()
+    {
+        audioSource.Stop();
+        if (mainEngineParticles.isPlaying)
+        {
+            mainEngineParticles.Stop();
+        }
+    }
+
+    private void RespondToRotateInput()
     {
         rigidBody.freezeRotation = true; // take manual control of rotation
 

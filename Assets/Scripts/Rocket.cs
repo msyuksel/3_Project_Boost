@@ -95,18 +95,20 @@ public class Rocket : MonoBehaviour
     private void LoadNextLevel()
     {
         state = State.Alive;
-
-        SceneManager();
+        LoadNextSceneInLoop();
 
     }
 
-    private static void SceneManager()
+    private static void LoadNextSceneInLoop()
     {
-        int nextSceneIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1;
-        if (UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings > nextSceneIndex)
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+        int lastSceneIndex = SceneManager.sceneCountInBuildSettings - 1;
+        if (lastSceneIndex == currentSceneIndex)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneIndex);
+            nextSceneIndex = 0;
         }
+            SceneManager.LoadScene(nextSceneIndex);
     }
 
     private void LoadFirstLevel()
@@ -166,14 +168,6 @@ public class Rocket : MonoBehaviour
         if (mainEngineParticles.isPlaying)
         {
             mainEngineParticles.Stop();
-        }
-    }
-
-    private void NextLevelDebugKey()
-    {
-        if (Input.GetKey(KeyCode.L)) // can thrust while rotating
-        {
-            SceneManager();
         }
     }
 

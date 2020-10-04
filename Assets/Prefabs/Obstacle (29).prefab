@@ -106,6 +106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea338421a35048f4b9b8fa48170e2b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementVector: {x: -19, y: 0, z: 0}
-  period: 2
-  movementFactor: 0
+  movementVector: {x: 0, y: 20, z: 0}
+  period: 1.8
+  movementFactor: 0.83636796

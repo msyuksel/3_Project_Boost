@@ -1720,31 +1720,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3143167669061622924, guid: 3c25d9602e755654cbb25e799da8cf1f,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 14.723408
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630280776560147478, guid: 3c25d9602e755654cbb25e799da8cf1f,
-        type: 3}
-      propertyPath: movementVector.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630280776560147478, guid: 3c25d9602e755654cbb25e799da8cf1f,
-        type: 3}
-      propertyPath: movementVector.y
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630280776560147478, guid: 3c25d9602e755654cbb25e799da8cf1f,
-        type: 3}
-      propertyPath: period
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8630280776560147478, guid: 3c25d9602e755654cbb25e799da8cf1f,
-        type: 3}
-      propertyPath: movementFactor
-      value: 0.83636796
-      objectReference: {fileID: 0}
     - target: {fileID: 9203894242948110139, guid: 3c25d9602e755654cbb25e799da8cf1f,
         type: 3}
       propertyPath: m_Name
